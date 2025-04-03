@@ -30,7 +30,7 @@ void rate_monotonic_scheduling(Process p[], int n) {
         }
         
         if (executed != -1) {
-            printf("%dms : Task %d is running.\n", time, p[executed].pid);
+            printf("%dms : process %d is running.\n", time, p[executed].pid);
             p[executed].remaining_time--;
             if (p[executed].remaining_time == 0) {
                 p[executed].next_arrival += p[executed].period;
